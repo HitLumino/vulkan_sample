@@ -5,11 +5,16 @@
   <PropertyGroup>
     <IncludePath>D:\VulkanSDK\1.1.106.0\Include;C:\Vulkan_Stuff\include;$(IncludePath)</IncludePath>
     <LibraryPath>D:\VulkanSDK\1.1.106.0\Lib;C:\Vulkan_Stuff\lib;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)build\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>..\obj\$(Platform)\$(Configuration)</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup>
     <Link>
       <AdditionalDependencies>glfw3.lib;vulkan-1.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <ClCompile>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup />
 </Project>

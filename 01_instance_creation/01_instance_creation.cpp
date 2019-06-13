@@ -4,7 +4,6 @@
 #include <iostream>
 #include <stdexcept>
 #include <cstdlib>
-#include <vector>
 
 const int WIDTH = 800;
 const int HEIGHT = 600;
@@ -34,15 +33,6 @@ private:
 
 	void initVulkan() {
 		createInstance();
-		uint32_t extensionCount = 0;
-		vkEnumerateInstanceExtensionProperties(nullptr, &extensionCount
-			, nullptr);
-	std::vector<VkExtensionProperties> extensions(extensionCount);
-	vkEnumerateInstanceExtensionProperties(nullptr, &extensionCount, extensions.data());
-	std::cout << "有用的拓展：" << std::endl;
-	for (const auto& extension : extensions) {
-		std::cout << "\t" << extension.extensionName << std::endl;
-	}
 	}
 
 	void mainLoop() {
