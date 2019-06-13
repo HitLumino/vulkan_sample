@@ -6,6 +6,7 @@
 #include <vector>
 #include <cstring>
 #include <cstdlib>
+#include <string>
 
 const int WIDTH = 800;
 const int HEIGHT = 600;
@@ -123,7 +124,7 @@ private:
 			throw std::runtime_error("failed to create instance!");
 		}
 	}
-
+	// æØ∏Ê¿‡–Õ
 	void populateDebugMessengerCreateInfo(VkDebugUtilsMessengerCreateInfoEXT& createInfo) {
 		createInfo = {};
 		createInfo.sType = VK_STRUCTURE_TYPE_DEBUG_UTILS_MESSENGER_CREATE_INFO_EXT;
@@ -147,8 +148,11 @@ private:
 		uint32_t glfwExtensionCount = 0;
 		const char** glfwExtensions;
 		glfwExtensions = glfwGetRequiredInstanceExtensions(&glfwExtensionCount);
-
+		
 		std::vector<const char*> extensions(glfwExtensions, glfwExtensions + glfwExtensionCount);
+		std::string name[] = { "hello","world" };
+		std::vector<std::string> extensio(name,name+2);
+
 
 		if (enableValidationLayers) {
 			extensions.push_back(VK_EXT_DEBUG_UTILS_EXTENSION_NAME);
@@ -191,7 +195,6 @@ private:
 
 int main() {
 	HelloTriangleApplication app;
-
 	try {
 		app.run();
 	}

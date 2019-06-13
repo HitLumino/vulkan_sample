@@ -4,6 +4,8 @@
 #include <iostream>
 #include <stdexcept>
 #include <cstdlib>
+#include <vector>
+#include <string>
 
 const int WIDTH = 800;
 const int HEIGHT = 600;
@@ -64,7 +66,14 @@ private:
 
 		uint32_t glfwExtensionCount = 0;
 		const char** glfwExtensions;
+
+		// @brief Returns the Vulkan instance extensions required by GLFW 2
+		// @return An array of ASCII encoded extension names
 		glfwExtensions = glfwGetRequiredInstanceExtensions(&glfwExtensionCount);
+		std::cout << "The Vulkan instance extensions required by GLFW.:" << std::endl;
+		for (size_t i = 0; i < glfwExtensionCount; i++) {
+			std::cout << "\t" << glfwExtensions[i];
+		}
 
 		createInfo.enabledExtensionCount = glfwExtensionCount;
 		createInfo.ppEnabledExtensionNames = glfwExtensions;
