@@ -91,6 +91,7 @@ private:
 };
 
 int main() {
+	// test2
 	HelloTriangleApplication app;
 
 	try {
