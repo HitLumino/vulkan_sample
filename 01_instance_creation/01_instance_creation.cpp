@@ -61,6 +61,9 @@ private:
 		appInfo.apiVersion = VK_API_VERSION_1_0;
 
 
+
+
+        //  test
 		VkInstanceCreateInfo createInfo = {};
 		createInfo.sType = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO;
 		createInfo.pApplicationInfo = &appInfo;
@@ -88,6 +91,7 @@ private:
 };
 
 int main() {
+	// test2
 	HelloTriangleApplication app;
 
 	try {
