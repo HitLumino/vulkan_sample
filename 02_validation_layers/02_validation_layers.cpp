@@ -15,6 +15,9 @@ const std::vector<const char*> validationLayers = {
 	"VK_LAYER_KHRONOS_validation"
 };
 
+
+
+
 #ifdef NDEBUG
 const bool enableValidationLayers = false;
 #else
@@ -124,7 +127,7 @@ private:
 			throw std::runtime_error("failed to create instance!");
 		}
 	}
-	// ¾¯¸æÀàÐÍ
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	void populateDebugMessengerCreateInfo(VkDebugUtilsMessengerCreateInfoEXT& createInfo) {
 		createInfo = {};
 		createInfo.sType = VK_STRUCTURE_TYPE_DEBUG_UTILS_MESSENGER_CREATE_INFO_EXT;
